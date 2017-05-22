@@ -1,0 +1,134 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.column {
+    width: 20%;
+    padding: 2%;
+    height: 100%;
+    float: left;
+    margin: 0;
+    transition: all 0.5s ease;
+}
+.column.wide {
+    width: 40% !important;
+}
+.column#first {
+    background: #444944;
+}
+.column#second {
+    background: #00112b;
+}
+.column#third {
+    background: #272421;
+}
+.column#fourth {
+    background: #313940;
+}
+.column#fifth {
+    background: #284347;
+}
+
+.outer {
+    color: #fff;
+    top: 50vh;
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    margin: 0 -7vw;
+}
+
+#innerimage1 {
+    width: 20vw;
+    overflow: hidden;
+    height: 420px;
+    margin-left: 5vw;
+    background-size: cover;
+}
+
+#innerimage2 {
+    width: 20vw;
+    overflow: hidden;
+    height: 400px;
+    margin-left: 5vw;
+    margin-top: -40vh;
+    background-size: cover;
+}
+
+#innerimage3 {
+    width: 20vw;
+    overflow: hidden;
+    height: 250px;
+    margin-left: 5vw;
+    margin-top: 8vh;
+    background-size: cover;
+}
+
+#innerimage4 {
+    width: 20vw;
+    overflow: hidden;
+    height: 400px;
+    margin-left: 5vw;
+    margin-top: -40vh;
+    background-size: cover;
+}
+
+#innerimage5 {
+    width: 20vw;
+    overflow: hidden;
+    height: 250px;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    background-size: cover;
+}
+
+
+
+/*all slides pictures bigger*/
+.tiles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tile {
+    position: relative;
+    float: left;
+    width: 33.333%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s ease-out;
+}
+
+
+/*maak het zwart*/
+#particles-js{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
