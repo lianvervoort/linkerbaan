@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <title>Drone Info</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body id="myPage">
+
+<div class="page-bg"></div>
+
+<div class="animation-wrapper">
+  <div class="particle particle-1"></div>
+  <div class="particle particle-2"></div>
+  <div class="particle particle-3"></div>
+  <div class="particle particle-4"></div>
+</div>
+
+<div class="page-wrapper"> 
+
+ <div class="rotorbutton1">
+  <div class="modal-frame">
+  <div class="modal">
+    <div class="modal-inset">
+      <div class="button close"><i class="fa fa-close"></i></div>
+
+      <div class="modal-body">
+        <h3>Rotor machines!</h3>
+        <p>Lorum ipsum<br /> volgt nog meer info.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay"></div>
+<button class="fancy-btn open">?</button>
+</div>
+  
+</div>
+
+<div class="page-wrapper2">
+
+ <div class="rotorbutton2">
+  <div class="modal-frame">
+  <div class="modal">
+    <div class="modal-inset">
+      <div class="button close"><i class="fa fa-close"></i></div>
+
+      <div class="modal-body">
+        <h3>Camera!</h3>
+        <p>Lorum ipsum<br /> volgt nog meer info.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay"></div>
+<button class="fancy-btn open">?</button>
+</div>
+
+</div>
+
+<div class="kifeshdrone">
+<img id="drone" src="drone.png" width="1024" height="768">
+</div>
+
+<div class="logo_container"><img src="asml_logo.png" alt="" /></div>
+
+
+
+<script>
+$(document).on("ready", function() {
+  $modal = $(".modal-frame");
+  $overlay = $(".modal-overlay");
+
+  /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+  $modal.bind(
+    "webkitAnimationEnd oanimationend msAnimationEnd animationend",
+    function(e) {
+      if ($modal.hasClass("state-leave")) {
+        $modal.removeClass("state-leave");
+      }
+    }
+  );
+
+  $(".close").on("click", function() {
+    $overlay.removeClass("state-show");
+    $modal.removeClass("state-appear").addClass("state-leave");
+  });
+
+  $(".open").on("click", function() {
+    $overlay.addClass("state-show");
+    $modal.removeClass("state-leave").addClass("state-appear");
+  });
+});
+
+</script>
+
+</body>
+</html>
