@@ -1,0 +1,182 @@
+@font-face {
+    font-family: futura;
+    src: url(Futura (Light).ttf);
+}
+@font-face {
+    font-family: SansSerif;
+    src: url(SansSerifBldFLF.otf);
+}
+
+
+body { background-color: #0b1423}
+
+
+/*Particles Style*/
+#particles-js {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+}
+.page_container1{
+    height: 100%;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+
+}
+.page_container2{
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.home_container{
+    width: 560px;
+    opacity: 1;
+    font-size: 50px;
+    color: white;
+    position: relative;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    text-decoration: none;
+}
+
+.home_quote{
+
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    width: 290px;
+    height: 100px;
+   color: white;
+    font-size: 35px;
+    text-align:center;
+    z-index: 2;
+    font-family: SansSerif;
+
+}
+.home_quote_link{
+
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    margin-top: 80px;
+    width: 290px;
+    height: 100px;
+    color: white;
+    font-size: 35px;
+    text-align:center;
+    z-index: 2;
+    font-family: SansSerif;
+    text-decoration: none;
+
+}
+
+.home_info{
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    z-index: 1;
+    font-family: futura;
+    text-align:center;
+    color: white;
+    font-size: 16px;
+}
+.logo_container{
+    bottom: 2px;
+    left: 20px;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+
+
+}
+
+.logo_container img{
+
+    width: 100%; /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+}
+
+.arrow-wave {
+    cursor:pointer;
+    height: 60px;
+    width: 80px;
+    margin: 0 auto;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    color: #FFF;
+    text-align: center;
+    font-size: 70px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.arrow-wave span {
+    display: block;
+    position: relative;
+    height: 10px;
+    width: 16px;
+    /*   background-color: rgba(100,100,100,0.4); */
+    opacity: 0.2;
+}
+
+.arrow-wave span::before,
+.arrow-wave span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 12px;
+    background-color: white;
+}
+
+.arrow-wave span::before {
+    top: -2px;
+    left: 0;
+    transform-origin: left center;
+    transform: rotate(45deg);
+}
+
+.arrow-wave span::after {
+    top: -2px;
+    right: 0;
+    transform-origin: right center;
+    transform: rotate(-45deg);
+}
+
+.arrow-wave span:nth-child(1n) {
+    animation: animate-arrow-wave 2s infinite;
+    animation-delay: .25s;
+}
+.arrow-wave span:nth-child(2n) {
+    animation: animate-arrow-wave 2s infinite;
+    animation-delay: .50s;
+}
+
+.arrow-wave span:nth-child(3n) {
+    animation: animate-arrow-wave 2s infinite;
+    animation-delay: .75s;
+}
+
+@keyframes animate-arrow-wave {
+    0%   { opacity: 0.2; }
+    25%  { opacity: 0.2; }
+    50%  { opacity: 0.2; }
+    75%  { opacity: 1.0; }
+    100% { opacity: 0.2; }
+}
